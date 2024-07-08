@@ -19,7 +19,7 @@
     @livewireStyles
 </head>
 
-<body class="h-full">
+<body class="h-lvh">
 
     <x-layout :menu="config('menu', [])">
         @isset($header)

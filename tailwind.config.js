@@ -17,8 +17,16 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                navGray: '#98A2B3',
-                'primary-pink':'#FF7896',
+                'nav-gray': {
+                    100:'#98A2B3',
+                    500: '#31373D',
+                },
+                'primary-pink': {
+                    50: '#FFF5F8',
+                    500:'#FF3360',
+                    600: '#FF7896'
+                },
+                'primary-red':'#D42620',
             },
         },
     },
