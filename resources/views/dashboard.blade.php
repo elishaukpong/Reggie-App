@@ -1,7 +1,7 @@
 <x-dashboard-layout>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 text-center pt-6">
-            <h3 class="font-bold text-xl">
+            <h3 class="font-semibold text-xl">
                 Welcome to Reggie
             </h3>
 

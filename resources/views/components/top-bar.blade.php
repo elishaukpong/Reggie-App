@@ -26,7 +26,7 @@
 
         <div class="ml-4 flex items-center md:ml-6" x-data="{open: false, openNotification: false}">
             <div>
-                <p class="rounded-full border border-primary-pink-600 text-primary-red py-2 px-5 font-medium">Test Mode</p>
+                <p class="rounded-full border border-primary-pink-600 text-primary-red py-2 px-5 font-medium cursor-pointer text-base">Test Mode</p>
             </div>
 
             <!-- Notification dropdown -->

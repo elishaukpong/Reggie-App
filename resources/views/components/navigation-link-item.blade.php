@@ -1,6 +1,6 @@
 <a href="{{ data_get($item, 'path') }}"
     @class([
-         'group flex items-center px-4 py-3 text-base font-medium rounded-[4px]',
+         'group flex items-center px-4 py-3 text-sm font-medium rounded-[4px]',
          'bg-pink-100 text-black border-r-8 border-primary-pink-600' => request()->is(trim(data_get($item, 'path'), '/')),
          'text-gray-600 hover:bg-pink-100 hover:text-black hover:border-r-8 hover:border-primary-pink-600' => !request()->is(trim(data_get($item, 'path'), '/')),
     ])>
