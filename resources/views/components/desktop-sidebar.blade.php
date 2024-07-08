@@ -8,7 +8,7 @@
         <div class="mt-5 flex flex-grow flex-col">
             <nav class="flex-1 space-y-1 px-2 pb-4">
                 @foreach($menu as $heading => $items)
-                    <div>
+                    <div class="pb-12">
                         <x-navigation-header :title="$heading"/>
 
                         <div>
@@ -20,12 +20,14 @@
                 @endforeach
             </nav>
 
-            <div class="flex">
+            <div class="flex items-end justify-between mb-8">
+
                 <div class="flex">
                     <img src="{{ asset('img/user.png') }}" alt="">
-                    <div>
-                        <h2>{{ auth()->user()->name }}</h2>
-                        <p>{{ auth()->user()->email }}</p>
+
+                    <div class="ml-2">
+                        <p class="text-md font-bold">{{ auth()->user()->name }}</p>
+                        <p class="text-sm font-light">{{ auth()->user()->email }}</p>
                     </div>
                 </div>
 
