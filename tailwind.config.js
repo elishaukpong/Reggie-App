@@ -18,6 +18,7 @@ export default {
             },
             colors: {
                 navGray: '#98A2B3',
+                'primary-pink':'#FF7896',
             },
         },
     },
