@@ -1,1 +1,1 @@
-<p class="text-sm font-medium leading-[17.4px] text-navGray pb-4">{{\Str::upper($title)}}</p>
+<p class="text-sm font-medium leading-[17.4px] text-nav-gray-100 pb-4">{{\Str::upper($title)}}</p>

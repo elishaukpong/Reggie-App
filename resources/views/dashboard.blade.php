@@ -1,17 +1,17 @@
 <x-dashboard-layout>
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 text-center">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 text-center pt-6">
             <h3 class="font-bold text-xl">
                 Welcome to Reggie
             </h3>
 
-            <p class="text-base font-normal text-nav-gray-500">
-                Your Business is in test mode
+            <p class="text-base font-normal text-nav-gray-500 pt-1">
+                Your Business is in Test Mode
             </p>
         </div>
     </div>
 
-    <div class="py-12 flex flex-col md:flex-row text-center">
+    <div class="py-16 flex flex-col md:flex-row text-center">
         <div class="bg-white md:w-1/3 m-4 px-20 py-[50px] rounded-[10px]">
             <div class="flex justify-center">
                 <span class="p-4 rounded-full bg-primary-pink-50">
