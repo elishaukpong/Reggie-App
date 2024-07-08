@@ -20,8 +20,8 @@
 
 <body class="h-full">
 <div x-data='{sbOpen: false}'>
-{{--    <x-ui-layout-off-canvas :menu="$menu"></x-ui-layout-off-canvas>--}}
-{{--    <x-ui-layout-desktop-sidebar :menu="$menu"></x-ui-layout-desktop-sidebar>--}}
+    <x-off-canvas :menu="$menu ?? []"></x-off-canvas>
+    <x-desktop-sidebar :menu="$menu ?? []"></x-desktop-sidebar>
     <div class="flex flex-1 flex-col md:pl-64">
         <x-top-bar></x-top-bar>
 
