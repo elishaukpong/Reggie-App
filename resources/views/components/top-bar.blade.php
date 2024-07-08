@@ -1,4 +1,4 @@
-<div class="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white shadow">
+<div class="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white shadow px-8">
     <button
             x-on:click="sbOpen = true"
             type="button" class="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden">
@@ -23,10 +23,51 @@
                 </div>
             </form>
         </div>
-        <div>
-            <p>Test Mode</p>
-        </div>
-        <div class="ml-4 flex items-center md:ml-6" x-data="{open: false}">
+
+        <div class="ml-4 flex items-center md:ml-6" x-data="{open: false, openNotification: false}">
+            <div>
+                <p>Test Mode</p>
+            </div>
+
+            <!-- Notification dropdown -->
+            <div class="relative ml-3">
+                <div>
+                    <button
+                            x-on:click="openNotification=!openNotification"
+                            type="button" class="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                        <span class="sr-only">Open Notification menu</span>
+                        <span class="text-primary-400">
+                            <x-notification />
+                        </span>
+                    </button>
+                </div>
+
+                <div
+                        x-cloak
+                        x-show="openNotification"
+                        x-on:click.away="openNotification=false"
+                        x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="transform opacity-0 scale-95"
+                        x-transition:enter-end="transform opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="transform opacity-100 scale-100"
+                        x-transition:leave-end="transform opacity-0 scale-95"
+                        class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+
+                    <form method="POST" action="{{ route('logout') }}" x-data>
+                        @csrf
+
+                        <a role="menuitem"
+                           href="#"
+                           x-on:click.prevent="$root.submit();"
+                                @class([
+                                    'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100',
+                                    'bg-gray-100' => request()->routeIs('api-tokens.index')
+                                ])>{{ __('Log Outsssssssssss') }}</a>
+                    </form>
+                </div>
+            </div>
+
 
             <!-- Profile dropdown -->
             <div class="relative ml-3">
