@@ -23,6 +23,9 @@
                 </div>
             </form>
         </div>
+        <div>
+            <p>Test Mode</p>
+        </div>
         <div class="ml-4 flex items-center md:ml-6" x-data="{open: false}">
 
             <!-- Profile dropdown -->
