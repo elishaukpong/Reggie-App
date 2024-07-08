@@ -1,0 +1,1 @@
+<p class="text-sm font-medium leading-[17.4px] text-navGray pb-4">{{\Str::upper($title)}}</p>
