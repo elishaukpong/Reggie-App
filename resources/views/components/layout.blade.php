@@ -1,7 +1,7 @@
 <div x-data='{sbOpen: false}'>
     <x-off-canvas :menu="$menu"></x-off-canvas>
     <x-desktop-sidebar :menu="$menu"></x-desktop-sidebar>
-    <div class="flex flex-1 flex-col md:pl-64">
+    <div class="flex flex-1 flex-col md:pl-80">
         <x-top-bar></x-top-bar>
 
         <x-banner />

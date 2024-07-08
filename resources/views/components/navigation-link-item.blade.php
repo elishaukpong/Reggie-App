@@ -2,7 +2,7 @@
         @class([
              'group flex items-center px-4 py-3 text-base font-medium rounded-[4px]',
              'bg-pink-100 text-black' => request()->is(trim(data_get($item, 'path'), '/')),
-             'text-gray-600 hover:bg-gray-50 hover:text-gray-900' => !request()->is(trim(data_get($item, 'path'), '/')),
+             'text-gray-600 hover:bg-pink-100 hover:text-black' => !request()->is(trim(data_get($item, 'path'), '/')),
         ])>
 
         @if(data_get($item, 'icon'))
