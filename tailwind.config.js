@@ -18,6 +18,7 @@ export default {
             },
             colors: {
                 'nav-gray': {
+                    50: '#F0F2F5',
                     100:'#98A2B3',
                     500: '#31373D',
                 },
