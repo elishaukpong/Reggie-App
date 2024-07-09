@@ -1,7 +1,7 @@
 @props(['active' => false])
 
 <div @class([
-         'flex px-8 py-4',
+         'flex px-8 py-4 cursor-pointer',
          'bg-white' => $active
     ])>
 
