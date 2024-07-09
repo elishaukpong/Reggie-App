@@ -255,12 +255,16 @@
                         <x-input class="w-full p-4 placeholder-gray-300" placeholder="Enter Business Name"/>
                     </div>
 
-                    <div class="pb-4">
+                    <div class="pb-6">
                         <x-input-label class="pb-2">
                             Account Name
                         </x-input-label>
 
                         <x-input class="w-full p-4 placeholder-gray-300" placeholder="Enter Business Name"/>
+
+                        <x-helper-text>
+                            To help us verify your account, the name on your bank account should match the name you provided as the owner of your business
+                        </x-helper-text>
                     </div>
 
                     <div>
