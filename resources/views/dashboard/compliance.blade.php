@@ -1,85 +1,36 @@
 <x-dashboard-layout>
     <div class="flex">
         <div class="w-1/3 mr-4">
-            <div class="bg-white flex px-8 py-4">
+            <x-compliance-sidebox :active="true">
+                Business Profile
+            </x-compliance-sidebox>
 
-                <div class="pt-1">
-                    <x-svg-stop />
-                </div>
+            <x-compliance-sidebox>
+                Contact
+            </x-compliance-sidebox>
 
-                <div class="ml-2">
-                    <p class="font-semibold text-nav-gray-100 pb-1">Business Profile</p>
+            <x-compliance-sidebox>
+                Owner
+            </x-compliance-sidebox>
 
-                    <button class="text-nav-gray-100 px-4 py-1 bg-nav-gray-50 rounded-full font-semibold text-[10px]">
-                        PENDING
-                    </button>
-                </div>
-
-            </div>
-
-            <div class="flex px-8 py-4">
-
-                <div class="pt-1">
-                    <x-svg-stop />
-                </div>
-
-                <div class="ml-2">
-                    <p class="font-semibold text-nav-gray-100 pb-1">Contact</p>
-
-                    <button class="text-nav-gray-100 px-4 py-1 bg-nav-gray-50 rounded-full font-semibold text-[10px]">
-                        PENDING
-                    </button>
-                </div>
-
-            </div>
-
-            <div class="flex px-8 py-4">
-
-                <div class="pt-1">
-                    <x-svg-stop />
-                </div>
-
-                <div class="ml-2">
-                    <p class="font-semibold text-nav-gray-100 pb-1">Owner</p>
-
-                    <button class="text-nav-gray-100 px-4 py-1 bg-nav-gray-50 rounded-full font-semibold text-[10px]">
-                        PENDING
-                    </button>
-                </div>
-
-            </div>
-
-            <div class="flex px-8 py-4">
-
-                <div class="pt-1">
-                    <x-svg-stop />
-                </div>
-
-                <div class="ml-2">
-                    <p class="font-semibold text-nav-gray-100 pb-1">Account</p>
-
-                    <button class="text-nav-gray-100 px-4 py-1 bg-nav-gray-50 rounded-full font-semibold text-[10px]">
-                        PENDING
-                    </button>
-                </div>
-
-            </div>
+            <x-compliance-sidebox>
+                Account
+            </x-compliance-sidebox>
 
         </div>
 
         <div class="w-2/3">
-            <div class="bg-white flex px-8 py-4">
-
-                <div class="pt-1">
-                    <x-svg-stop />
+            <div class="bg-white flex p-8 text-black flex-col">
+                <div class="pb-6">
+                    <p class="font-medium text-base">Business Profile</p>
                 </div>
 
-                <div class="ml-2">
-                    <p class="font-semibold text-nav-gray-100 pb-1">Business Profile</p>
+                <div>
+                    <x-input-label class="pb-2">
+                        Business Name
+                    </x-input-label>
 
-                    <button class="text-nav-gray-100 px-4 py-1 bg-nav-gray-50 rounded-full font-semibold text-[10px]">
-                        PENDING
-                    </button>
+                    <x-input class="w-full"/>
                 </div>
 
             </div>
