@@ -20,19 +20,65 @@
         </div>
 
         <div class="w-2/3">
-            <div class="bg-white flex p-8 text-black flex-col">
+            <div class="bg-white flex p-8 flex-col">
                 <div class="pb-6">
-                    <p class="font-medium text-base">Business Profile</p>
+                    <p class="font-medium text-base text-black">Business Profile</p>
                 </div>
 
                 <div>
-                    <x-input-label class="pb-2">
-                        Business Name
-                    </x-input-label>
+                    <div class="pb-4">
+                        <x-input-label class="pb-2">
+                            Business Name
+                        </x-input-label>
 
-                    <x-input class="w-full"/>
+                        <x-input class="w-full p-4 placeholder-gray-300" placeholder="Enter Business Name"/>
+                    </div>
+
+                    <div class="pb-4">
+                        <x-input-label class="pb-2">
+                            Description
+                        </x-input-label>
+
+                        <x-text-area class="w-full p-4 placeholder-gray-900" placeholder="Enter Business Name"/>
+                    </div>
+
+                    <div class="pb-4">
+                        <x-input-label class="pb-2">
+                            Staff Size
+                        </x-input-label>
+
+
+                        <x-select class="w-full p-4 placeholder-gray-300"/>
+                    </div>
+
+                    <div class="pb-4">
+                        <x-input-label class="pb-2">
+                            Industry
+                        </x-input-label>
+
+                        <x-select class="w-full p-4 placeholder-gray-300"/>
+                    </div>
+
+                    <div class="pb-4">
+                        <x-input-label class="pb-2">
+                            Category
+                        </x-input-label>
+
+                        <x-select class="w-full p-4 placeholder-gray-300"/>
+                    </div>
+
+                    <div class="pb-4">
+                        <x-input-label class="pb-2">
+                            Business Type
+                        </x-input-label>
+
+                        <x-select class="w-full p-4 placeholder-gray-300"/>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="text-white bg-primary-pink-500 rounded-md py-2 px-4 w-full">Save</button>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
