@@ -1,26 +1,39 @@
 <x-dashboard-layout>
-    <div class="flex">
+    <div class="flex" x-data="{
+        business:true,
+        contact:false,
+        owner:false,
+        account: false,
+        show: function(value) {
+            this.business = false;
+            this.contact = false;
+            this.owner = false;
+            this.account = false;
+
+            this[value] = true;
+        }
+        }">
         <div class="w-1/3 mr-4">
-            <x-compliance-sidebox :active="false">
+            <x-compliance-sidebox :active="false" @click="show('business');">
                 Business Profile
             </x-compliance-sidebox>
 
-            <x-compliance-sidebox :active="false">
+            <x-compliance-sidebox :active="false" @click="show('contact');">
                 Contact
             </x-compliance-sidebox>
 
-            <x-compliance-sidebox :active="false">
+            <x-compliance-sidebox :active="false" @click="show('owner');">
                 Owner
             </x-compliance-sidebox>
 
-            <x-compliance-sidebox :active="true">
+            <x-compliance-sidebox :active="true" @click="show('account');">
                 Account
             </x-compliance-sidebox>
 
         </div>
 
-        <div class="w-2/3" x-data="{showBusiness:false, showContact:false, showOwner:false}">
-            <div x-cloak x-show="showBusiness" class="bg-white flex p-8 flex-col rounded-[10px]">
+        <div class="w-2/3">
+            <div x-cloak x-show="business" class="bg-white flex p-8 flex-col rounded-[10px]">
                 <div class="pb-6">
                     <p class="font-medium text-base text-black">Business Profile</p>
                 </div>
@@ -81,7 +94,7 @@
                 </div>
             </div>
 
-            <div x-cloak x-show="showContact">
+            <div x-cloak x-show="contact">
                 <div class="bg-white flex p-8 flex-col rounded-[10px] mb-8">
                     <div class="pb-6">
                         <p class="font-medium text-base text-black">Contact</p>
@@ -171,7 +184,7 @@
                 </div>
             </div>
 
-            <div x-cloak x-show="showOwner" class="bg-white flex p-8 flex-col rounded-[10px] mb-8">
+            <div x-cloak x-show="owner" class="bg-white flex p-8 flex-col rounded-[10px] mb-8">
                 <div class="pb-6 flex justify-between">
                     <p class="font-medium text-base text-black">Owner's Profile</p>
 
@@ -226,7 +239,7 @@
                 </div>
             </div>
 
-            <div class="bg-white flex p-8 flex-col rounded-[10px] mb-8">
+            <div x-cloak x-show="account" class="bg-white flex p-8 flex-col rounded-[10px] mb-8">
                 <div class="pb-6 flex justify-between">
                     <p class="font-medium text-base text-black">Personal Bank Account</p>
 
@@ -272,8 +285,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 </x-dashboard-layout>
