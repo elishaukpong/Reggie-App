@@ -1,5 +1,5 @@
 <x-dashboard-layout>
-    <div class="py-12">
+    <div class="py-12" x-data="{}">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 text-center pt-6">
             <h3 class="font-semibold text-xl">
                 Welcome to Reggie
@@ -37,7 +37,7 @@
             Learn what Reggie <br> can do for you
 
             @slot('footer')
-                <x-button-primary-outline>
+                <x-button-primary-outline id="start-tour">
                     Take a Tour
                 </x-button-primary-outline>
             @endslot
@@ -59,4 +59,8 @@
         </x-dashboard-details-box>
 
     </div>
+
+    @push('scripts')
+        @vite(['resources/js/tour.js'])
+    @endpush
 </x-dashboard-layout>

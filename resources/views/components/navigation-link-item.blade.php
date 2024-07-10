@@ -1,4 +1,5 @@
 <a href="{{ data_get($item, 'path') }}"
+    @if(data_get($item, 'id')) id="{{ data_get($item, 'id') }}" @endif
     @class([
          'group flex items-center px-4 py-3 text-sm font-medium rounded-[4px]',
          'bg-pink-100 text-black border-r-8 border-primary-pink-600' => request()->is(trim(data_get($item, 'path'), '/')),

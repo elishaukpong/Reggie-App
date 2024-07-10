@@ -9,9 +9,9 @@
             <nav class="flex-1 space-y-1 px-2 pb-4">
                 @foreach($menu as $heading => $items)
                     <div class="pb-12">
-                        <x-navigation-header :title="$heading"/>
+                        <x-navigation-header :title="$heading" id="{{Str::slug($heading)}}"/>
 
-                        <div>
+                        <div class="{{Str::slug($heading)}}">
                             @foreach($items as $item)
                                 <x-navigation-link-item :item="$item" />
                             @endforeach
