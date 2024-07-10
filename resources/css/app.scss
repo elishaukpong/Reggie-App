@@ -4,7 +4,6 @@
 
 @import 'shepherd.js/dist/css/shepherd.css';
 
-
 [x-cloak] {
     display: none;
 }
@@ -13,6 +12,14 @@ body {
     font-family: 'General Sans', sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+.shepherd-enabled.shepherd-element {
+    @apply max-w-60;
+}
+
+.shepherd-content {
+    @apply rounded-[8px] p-3;
 }
 
 .shepherd-button {
@@ -25,5 +32,17 @@ body {
     &.shepherd-button-secondary {
         @apply bg-nav-gray-75 text-nav-gray-600;
     }
+}
+
+.shepherd-has-title .shepherd-content .shepherd-header {
+    @apply bg-white p-0 px-3 pb-0 pt-3;
+}
+
+.shepherd-title {
+    @apply font-medium text-xs;
+}
+
+.shepherd-text {
+    @apply text-nav-gray-100 text-xs p-3 pb-0 mb-4;
 }
 

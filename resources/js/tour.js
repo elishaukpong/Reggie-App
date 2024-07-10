@@ -14,7 +14,7 @@ let tour = new Shepherd.Tour({
 tour.addStep({
     id: 'intro',
     title: 'Welcome',
-    text: 'Welcome to the Reggie tour! <br> Let\'s show you around.',
+    text: 'Welcome to the Reggie! Let\'s show you around.',
     buttons: [
         {
             text: 'Next',
@@ -37,11 +37,9 @@ tour.addStep({
             action() {
                 return this.next();
             },
-            // classes: 'text-white bg-primary-pink-500 rounded-md py-2 px-4',
             text: 'Proceed'
         },
     ],
-    classes: 'bg-primary-pink-500',
     modalOverlayOpeningPadding: '30px',
 
 });
@@ -53,7 +51,6 @@ tour.addStep({
         element: '#payments',
         on: 'right'
     },
-    classes: '',
     buttons: [
         {
             action() {
@@ -66,7 +63,6 @@ tour.addStep({
             action() {
                 return this.next();
             },
-            classes: 'bg-primary shadow-md rounded-sm text-white hover:!bg-primary !px-2 !py-1',
             text: 'Proceed'
         }
     ],
@@ -93,7 +89,6 @@ tour.addStep({
             action() {
                 return this.next();
             },
-            classes: 'bg-primary shadow-md rounded-sm text-white hover:!bg-primary !px-2 !py-1',
             text: 'Proceed'
         }
     ],
@@ -101,7 +96,7 @@ tour.addStep({
 });
 
 tour.addStep({
-    title: 'admin',
+    title: 'Admin',
     text: 'Finally, manage your Paystack account settings and activity from here',
     attachTo: {
         element:'.business-tools #general-settings',
@@ -120,7 +115,6 @@ tour.addStep({
             action() {
                 return this.cancel();
             },
-            classes: 'bg-primary shadow-md rounded-sm text-white hover:!bg-primary !px-2 !py-1',
             text: 'End Tour'
         },
     ],
