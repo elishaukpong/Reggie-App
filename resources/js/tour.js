@@ -1,11 +1,10 @@
 import Shepherd from 'shepherd.js';
-import 'shepherd.js/dist/css/shepherd.css';
 
 let tour = new Shepherd.Tour({
     useModalOverlay: true,
     defaultStepOptions: {
         cancelIcon: {
-            enabled: true
+            enabled: false
         },
         classes: 'bg-white rounded-md',
         scrollTo: { behavior: 'smooth', block: 'center' }
@@ -13,6 +12,20 @@ let tour = new Shepherd.Tour({
 });
 
 tour.addStep({
+    id: 'intro',
+    title: 'Welcome',
+    text: 'Welcome to the Reggie tour! <br> Let\'s show you around.',
+    buttons: [
+        {
+            text: 'Next',
+            action: tour.next
+        }
+    ],
+    modalOverlayOpeningPadding: '30px'
+});
+
+tour.addStep({
+    id:'home',
     title: 'Home',
     text: 'View metrics and chart to know how your business is performing',
     attachTo: {
@@ -24,11 +37,13 @@ tour.addStep({
             action() {
                 return this.next();
             },
-            classes: '',
-            text: 'Next'
+            // classes: 'text-white bg-primary-pink-500 rounded-md py-2 px-4',
+            text: 'Proceed'
         },
     ],
+    classes: 'bg-primary-pink-500',
     modalOverlayOpeningPadding: '30px',
+
 });
 
 tour.addStep({
@@ -52,7 +67,7 @@ tour.addStep({
                 return this.next();
             },
             classes: 'bg-primary shadow-md rounded-sm text-white hover:!bg-primary !px-2 !py-1',
-            text: 'Next'
+            text: 'Proceed'
         }
     ],
     modalOverlayOpeningPadding: '30px',
@@ -79,29 +94,21 @@ tour.addStep({
                 return this.next();
             },
             classes: 'bg-primary shadow-md rounded-sm text-white hover:!bg-primary !px-2 !py-1',
-            text: 'Next'
+            text: 'Proceed'
         }
     ],
     modalOverlayOpeningPadding: '30px',
-    // id: 'creating'
 });
 
 tour.addStep({
     title: 'admin',
     text: 'Finally, manage your Paystack account settings and activity from here',
     attachTo: {
-        element: '#general-settings',
+        element:'.business-tools #general-settings',
         on: 'right'
     },
     classes: '',
     buttons: [
-        {
-            action() {
-                return this.cancel();
-            },
-            classes: 'bg-primary shadow-md rounded-sm text-white hover:!bg-primary !px-2 !py-1',
-            text: 'End Tour'
-        },
         {
             action() {
                 return this.back();
@@ -109,9 +116,15 @@ tour.addStep({
             classes: 'shepherd-button-secondary',
             text: 'Back'
         },
+        {
+            action() {
+                return this.cancel();
+            },
+            classes: 'bg-primary shadow-md rounded-sm text-white hover:!bg-primary !px-2 !py-1',
+            text: 'End Tour'
+        },
     ],
     modalOverlayOpeningPadding: '30px',
-    // id: 'creating'
 });
 
 document.querySelector("#start-tour")
