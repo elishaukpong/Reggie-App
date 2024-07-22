@@ -1,3 +1,3 @@
-<p class="font-normal text-sm text-nav-gray-400 pt-4">
+<p class="font-normal text-sm text-nav-gray-500 pt-4">
     {{$slot}}
 </p>

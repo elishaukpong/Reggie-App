@@ -23,7 +23,7 @@ return [
         ],
         [
             'name' => 'Home',
-            'path' => '/attendances',
+            'path' => '/home',
             'id' => 'home',
             'icon' => '<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 15.625C9.65833 15.625 9.375 15.3417 9.375 15V12.5C9.375 12.1583 9.65833 11.875 10 11.875C10.3417 11.875 10.625 12.1583 10.625 12.5V15C10.625 15.3417 10.3417 15.625 10 15.625Z"/>
